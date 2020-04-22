@@ -34,19 +34,8 @@ def makeResponse(req):
 	condition = weather[0]['weather'][0]['description']
 	speech = "The forecast for "+city+ " for "+date+" is "+ condition
 	return {
-	"fulfillmentText": "fulfillmentText",
-	"fulfillmentMessages": [
-		{
-		"text": {
-			"text": [
-			{
-			"text": "speech"
-			}
-		]
-		}
-		}
-	]
-	}
+            "fulfillmentText": speech
+        }
 if __name__=='__main__':
 
 	port = int(os.getenv('PORT',5000))
