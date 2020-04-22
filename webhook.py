@@ -42,7 +42,7 @@ def makeResponse(req):
 			}
 	}]}
 	
-if__name__=='__main__':
+if __name__=='__main__':
 
 	port=int(os.getenv('PORT',5000))
 	print("starting on port %d" % port)
