@@ -33,8 +33,7 @@ def makeResponse(req):
 	weather = json_object['list']
 	condition = weather[0]['weather'][0]['description']
 	speech = "The forecast for "+city+ " for "+date+" is "+ condition
-	return
-   {
+	return {
 	"fulfillmentText": "fulfillmentText",
 	"fulfillmentMessages": [
 		{
@@ -48,7 +47,7 @@ def makeResponse(req):
 		}
 	],
 	"source": "webhook-sample"
-   }
+	}
 if __name__=='__main__':
 
 	port = int(os.getenv('PORT',5000))
