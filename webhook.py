@@ -29,7 +29,7 @@ def makeResponse(req):
 	city=parameters.get("geo-city")
 	date=parameters.get("date")
 	
-r=requests.get('http://api.openweathermap.org/data/2.5/forecast?q=hyderabad,in&appid=db91df44baf43361cbf73026ce5156cb')
+	r=requests.get('http://api.openweathermap.org/data/2.5/forecast?q=hyderabad,in&appid=db91df44baf43361cbf73026ce5156cb')
 	json_object=r.json()
 	weather=json_object['list']
 	condition=weather[0]['weather'][0]['description']
@@ -40,10 +40,10 @@ r=requests.get('http://api.openweathermap.org/data/2.5/forecast?q=hyderabad,in&a
 			"text": {
 				"text": speech
 			}
-		}]}
+	}]}
 	
 if__name__=='__main__':
 
 	port=int(os.getenv('PORT',5000))
-	print("starting on port %d"% port)
+	print("starting on port %d" % port)
 	app.run(debug=False, port=port, host='0.0.0.0')
