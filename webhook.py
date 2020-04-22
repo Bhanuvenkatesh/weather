@@ -40,13 +40,12 @@ def makeResponse(req):
 		"simpleresponses": {
 			"simpleResponses": [
 			{
-			"text": "speech"
+			"speech": "speech"
 			}
 		]
 		}
 		}
-	],
-	"source": "webhook-sample"
+	]
 	}
 if __name__=='__main__':
 
