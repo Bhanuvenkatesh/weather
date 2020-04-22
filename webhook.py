@@ -6,15 +6,15 @@ from flask import request
 from flask import make_response
 
 
-app=Flask(_name_)
+app=Flask(__name__)
 
 @app.route('/webhook', methods=['POST'])
 
-defwebhook():
+def webhook():
 
 	req=request.get_json(silent=True, force=True)
 
-	print(json.dumps(req,indent =4))
+	print(json.dumps(req, indent =4))
 
 	res=makeResponse(req)
 	res=json.dumps(res, indent=4)
@@ -22,7 +22,7 @@ defwebhook():
 	r.headers['Content-Type']='application/json'
 	return r
 	
-defmakeResponse(req):
+def makeResponse(req):
 	
 	result=req.get("queryResult")
 	parameters=result.get("parameters")
