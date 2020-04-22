@@ -43,7 +43,7 @@ def makeResponse(req):
 		}
 		}
 	],
-	"source": "<speech>"
+	"source": "webhook-sample"
 }
 	
 if __name__=='__main__':
