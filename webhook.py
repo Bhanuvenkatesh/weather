@@ -33,13 +33,18 @@ def makeResponse(req):
 	weather = json_object['list']
 	condition = weather[0]['weather'][0]['description']
 	speech = "The forecast for "+city+ " for "+date+" is "+ condition
-	return{
-		"fulfillmentMessages": [
+	return
+{
+	"fulfillmentText": "speech",
+	"fulfillmentMessages": [
 		{
-			"text": {
-				"text": speech
-			}
-	}]}
+		"text": {
+			"text": ["speech"]
+		}
+		}
+	],
+	"source": "<speech>"
+}
 	
 if __name__=='__main__':
 
