@@ -37,10 +37,10 @@ def makeResponse(req):
 	"fulfillmentText": "fulfillmentText",
 	"fulfillmentMessages": [
 		{
-		"simpleresponses": {
-			"simpleResponses": [
+		"text": {
+			"text": [
 			{
-			"speech": "speech"
+			"text": "speech"
 			}
 		]
 		}
