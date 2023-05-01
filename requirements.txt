@@ -1,2 +1,2 @@
-FLASK==1.0
+FLASK==2.3.2
 Requests==2.20.0
